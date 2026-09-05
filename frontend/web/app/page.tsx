@@ -14,12 +14,14 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   const [session, setSession] = useState<any>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
   }, []);
 
-  const isLoggedIn = session || (typeof window !== "undefined" && localStorage.getItem("demo_session"));
+  const isLoggedIn = mounted && (session || (typeof window !== "undefined" && localStorage.getItem("demo_session")));
 
   const containerVariants = {
     hidden: { opacity: 0 },

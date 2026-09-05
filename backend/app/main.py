@@ -53,6 +53,7 @@ async def correlation_id(request: Request, call_next):
     request.state.correlation_id = request.headers.get("X-Correlation-ID", str(uuid.uuid4()))
     response = await call_next(request)
     response.headers["X-Correlation-ID"] = request.state.correlation_id
+    response.headers["Access-Control-Allow-Private-Network"] = "true"
     return response
 
 

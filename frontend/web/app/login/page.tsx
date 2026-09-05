@@ -14,22 +14,35 @@ export default function Login() {
   const [message,setMessage]=useState(""); 
   const [loading,setLoading]=useState(false); 
 
+  function loginLocally(customEmail?: string) {
+    const userEmail = customEmail || email || "shelaracademy22cet35@gmail.com";
+    localStorage.setItem("demo_session", userEmail); 
+    location.assign("/app"); 
+  }
+
   async function submit(e:FormEvent<HTMLFormElement>) { 
     e.preventDefault(); 
     setLoading(true); 
     setMessage("");
     
     if (email.startsWith("demo")) { 
-      localStorage.setItem("demo_session", email); 
-      location.assign("/app"); 
+      loginLocally(email);
       return; 
     } 
     
-    const {error}=await supabase.auth.signInWithPassword({email,password}); 
-    setLoading(false); 
-    
-    if(error) setMessage(error.message); 
-    else location.assign("/app"); 
+    try {
+      const {error}=await supabase.auth.signInWithPassword({email,password}); 
+      setLoading(false); 
+      
+      if(error) {
+        setMessage(error.message);
+      } else {
+        location.assign("/app"); 
+      }
+    } catch (err: any) {
+      setLoading(false);
+      setMessage(err?.message || "Failed to reach authentication server.");
+    }
   } 
 
   async function signUp() { 
@@ -37,17 +50,25 @@ export default function Login() {
     setMessage("");
     
     if (email.startsWith("demo")) { 
-      localStorage.setItem("demo_session", email); 
-      location.assign("/app"); 
+      loginLocally(email);
       return; 
     } 
     
-    const {data, error}=await supabase.auth.signUp({email,password}); 
-    setLoading(false); 
-    
-    if(error) setMessage(error.message); 
-    else if(data.session) location.assign("/app"); 
-    else setMessage("Check your email to confirm your account."); 
+    try {
+      const {data, error}=await supabase.auth.signUp({email,password}); 
+      setLoading(false); 
+      
+      if(error) {
+        setMessage(error.message);
+      } else if(data.session) {
+        location.assign("/app"); 
+      } else {
+        setMessage("Account created! Check your email to confirm, or click 'Instant Access' below."); 
+      }
+    } catch (err: any) {
+      setLoading(false);
+      setMessage(err?.message || "Failed to reach authentication server.");
+    }
   } 
 
   return (
@@ -99,8 +120,17 @@ export default function Login() {
             </div>
             
             {message && (
-              <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-md border border-destructive/20">
-                {message}
+              <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-md border border-destructive/20 space-y-2">
+                <p>{message}</p>
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full text-xs font-medium border-destructive/30 hover:bg-destructive/10"
+                  onClick={() => loginLocally()}
+                >
+                  ⚡ Continue as {email || "Local User"} (Instant Access)
+                </Button>
               </div>
             )}
             
@@ -113,18 +143,27 @@ export default function Login() {
               </Button>
             </div>
           </CardContent>
-          <CardFooter className="flex flex-col border-t border-border/50 bg-muted/20 px-6 py-4">
-            <p className="text-sm text-muted-foreground mb-3 text-center">
-              Having Supabase connection issues?
+          <CardFooter className="flex flex-col gap-2 border-t border-border/50 bg-muted/20 px-6 py-4">
+            <p className="text-xs text-muted-foreground text-center">
+              Quick access without waiting for email verification:
             </p>
             <Button 
               type="button" 
               variant="secondary" 
-              className="w-full gap-2"
-              onClick={() => { setEmail("demo@sentinelpay.com"); setPassword("demo123"); }}
+              className="w-full gap-2 text-sm"
+              onClick={() => loginLocally()}
             >
-              <Sparkles className="w-4 h-4" />
-              Use Demo Account
+              <Sparkles className="w-4 h-4 text-primary" />
+              {email ? `Instant Access as ${email}` : "Instant Access (Bypass Auth)"}
+            </Button>
+            <Button 
+              type="button" 
+              variant="ghost" 
+              size="sm"
+              className="w-full text-xs text-muted-foreground"
+              onClick={() => { setEmail("demo@sentinelpay.com"); setPassword("demo123"); loginLocally("demo@sentinelpay.com"); }}
+            >
+              Or load default demo account
             </Button>
           </CardFooter>
         </form>
