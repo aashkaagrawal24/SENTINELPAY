@@ -1,0 +1,37 @@
+[project]
+name = "sentinelpay-backend"
+version = "4.2.0"
+requires-python = ">=3.11"
+dependencies = [
+  "alembic>=1.14,<2",
+  "cryptography>=44,<47",
+  "diffprivlib>=0.6.5,<1",
+  "dowhy>=0.12,<1",
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "joblib>=1.5,<2",
+  "networkx>=3.4,<4",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "phe>=1.5,<2",
+  "psycopg[binary]>=3.2,<4",
+  "py-ecc>=8,<9",
+  "pydantic-settings>=2.6,<3",
+  "PyJWT[crypto]>=2.10,<3",
+  "scikit-learn>=1.5,<1.8",
+  "sqlalchemy>=2.0,<3",
+  "uvicorn[standard]>=0.32,<1",
+  "z3-solver>=4.13,<5",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9", "ruff>=0.8,<1"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+[tool.setuptools.packages.find]
+include = ["app*"]
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+[tool.ruff.lint]
+ignore = ["B008"] # FastAPI's dependency-injection signature is intentional.

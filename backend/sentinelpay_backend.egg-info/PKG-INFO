@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: sentinelpay-backend
+Version: 4.2.0
+Requires-Python: >=3.11
+Requires-Dist: alembic<2,>=1.14
+Requires-Dist: cryptography<47,>=44
+Requires-Dist: diffprivlib<1,>=0.6.5
+Requires-Dist: dowhy<1,>=0.12
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: httpx<1,>=0.28
+Requires-Dist: networkx<4,>=3.4
+Requires-Dist: numpy<3,>=2.0
+Requires-Dist: phe<2,>=1.5
+Requires-Dist: psycopg[binary]<4,>=3.2
+Requires-Dist: py-ecc<9,>=8
+Requires-Dist: pydantic-settings<3,>=2.6
+Requires-Dist: PyJWT[crypto]<3,>=2.10
+Requires-Dist: scikit-learn<2,>=1.5
+Requires-Dist: sqlalchemy<3,>=2.0
+Requires-Dist: uvicorn[standard]<1,>=0.32
+Requires-Dist: z3-solver<5,>=4.13
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8.3; extra == "dev"
+Requires-Dist: ruff<1,>=0.8; extra == "dev"

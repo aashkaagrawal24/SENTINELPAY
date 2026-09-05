@@ -1,0 +1,17 @@
+{
+  "algorithm": "sklearn.linear_model.LogisticRegression",
+  "artifact_sha256": "b97cc657a3a73aff3419f227b949f6d2a39bf943764dfab0bcb04c60c267e2cb",
+  "dataset_sha256": "64fb0f93a2a3b2859302938bff5921e4af97d8fe837cb9f1192235f4c0d9cb4c",
+  "metrics": {
+    "brier_score": 0.246527,
+    "evaluation_rows": 60,
+    "f1": 0.622951,
+    "precision": 0.612903,
+    "recall": 0.633333,
+    "roc_auc": 0.68,
+    "training_rows": 180
+  },
+  "provenance": "DETERMINISTIC_CONTROLLED_DATASET",
+  "rows": 240,
+  "version": "negotiability-v1"
+}

@@ -1,0 +1,297 @@
+name: Vanilla Ice Cream Tub
+sku: ICE-VAN-001
+brand: Amul
+category: Ice Cream
+price: 120
+floor_price: 100
+stock: 100
+color: White
+description: Classic creamy vanilla flavoured ice cream tub 500ml
+
+---
+
+name: Chocolate Ice Cream Tub
+sku: ICE-CHOC-002
+brand: Amul
+category: Ice Cream
+price: 130
+floor_price: 110
+stock: 100
+color: Brown
+description: Rich chocolate flavoured ice cream tub 500ml
+
+---
+
+name: Strawberry Ice Cream Tub
+sku: ICE-STRAW-003
+brand: Kwality Walls
+category: Ice Cream
+price: 125
+floor_price: 105
+stock: 80
+color: Pink
+description: Fresh strawberry flavoured ice cream tub 500ml
+
+---
+
+name: Mango Kulfi Bar
+sku: ICE-KULFI-004
+brand: Mother Dairy
+category: Ice Cream
+price: 30
+floor_price: 25
+stock: 200
+color: Yellow
+description: Traditional mango kulfi on stick 60ml
+
+---
+
+name: Full Cream Milk
+sku: DAIRY-MILK-001
+brand: Amul
+category: Dairy
+price: 68
+floor_price: 65
+stock: 150
+color: White
+description: Fresh full cream pasteurised milk 1 litre pouch
+
+---
+
+name: Paneer Block
+sku: DAIRY-PAN-002
+brand: Mother Dairy
+category: Dairy
+price: 95
+floor_price: 85
+stock: 80
+color: White
+description: Fresh soft paneer block 200g
+
+---
+
+name: Dahi Curd
+sku: DAIRY-DAHI-003
+brand: Nestle
+category: Dairy
+price: 55
+floor_price: 48
+stock: 120
+color: White
+description: Creamy fresh set dahi curd 400g cup
+
+---
+
+name: Butter Salted
+sku: DAIRY-BUT-004
+brand: Amul
+category: Dairy
+price: 58
+floor_price: 52
+stock: 100
+color: Yellow
+description: Amul salted butter 100g pack
+
+---
+
+name: Cheese Slices
+sku: DAIRY-CHSE-005
+brand: Amul
+category: Dairy
+price: 110
+floor_price: 95
+stock: 90
+color: Yellow
+description: Processed cheese slices pack of 10
+
+---
+
+name: Bourbon Biscuit
+sku: BISC-BOUR-001
+brand: Britannia
+category: Biscuit
+price: 40
+floor_price: 35
+stock: 200
+color: Brown
+description: Classic chocolate cream bourbon biscuit 150g pack
+
+---
+
+name: Good Day Cashew Biscuit
+sku: BISC-GD-002
+brand: Britannia
+category: Biscuit
+price: 35
+floor_price: 30
+stock: 250
+color: Golden
+description: Buttery cashew biscuit 150g pack
+
+---
+
+name: Marie Gold Biscuit
+sku: BISC-MAR-003
+brand: Britannia
+category: Biscuit
+price: 25
+floor_price: 22
+stock: 300
+color: Golden
+description: Light crispy marie biscuit 250g pack
+
+---
+
+name: Parle G Biscuit
+sku: BISC-PARL-004
+brand: Parle
+category: Biscuit
+price: 10
+floor_price: 9
+stock: 500
+color: Yellow
+description: Iconic glucose biscuit 100g pack
+
+---
+
+name: Hide and Seek Chocolate Biscuit
+sku: BISC-HS-005
+brand: Parle
+category: Biscuit
+price: 45
+floor_price: 40
+stock: 180
+color: Brown
+description: Chocolate chip cookies 100g pack
+
+---
+
+name: Samsung Galaxy Buds2 Pro
+sku: ELEC-BUDS-001
+brand: Samsung
+category: Electronics
+price: 12999
+floor_price: 11500
+stock: 30
+color: Graphite
+description: Premium wireless earbuds with ANC and 360 audio
+
+---
+
+name: boAt Airdopes 141 TWS Earbuds
+sku: ELEC-BOAT-002
+brand: boAt
+category: Electronics
+price: 1299
+floor_price: 1100
+stock: 60
+color: Black
+description: True wireless stereo earbuds with 42 hours playback
+
+---
+
+name: Mi 10000mAh Power Bank
+sku: ELEC-XMPB-003
+brand: Xiaomi
+category: Electronics
+price: 999
+floor_price: 850
+stock: 50
+color: Black
+description: Mi compact 10000mAh power bank with dual USB output
+
+---
+
+name: TP-Link WiFi Router
+sku: ELEC-TPLK-004
+brand: TP-Link
+category: Electronics
+price: 1499
+floor_price: 1299
+stock: 40
+color: White
+description: 300 Mbps wireless N router with 2 antennas
+
+---
+
+name: Portronics USB-C Hub
+sku: ELEC-PRTC-005
+brand: Portronics
+category: Electronics
+price: 1799
+floor_price: 1550
+stock: 35
+color: Silver
+description: 7-in-1 USB-C hub with HDMI 4K USB 3.0 and SD card reader
+
+---
+
+name: Syska LED Bulb 9W
+sku: ELEC-SYSK-006
+brand: Syska
+category: Electronics
+price: 89
+floor_price: 75
+stock: 200
+color: White
+description: 9 watt LED bulb cool white base B22
+
+---
+
+name: Men Classic White T-Shirt
+sku: TSHIRT-MW-001
+brand: Jockey
+category: T-Shirt
+price: 499
+floor_price: 420
+stock: 80
+color: White
+description: 100% cotton round neck classic fit men white t-shirt
+
+---
+
+name: Men Black Graphic T-Shirt
+sku: TSHIRT-MG-002
+brand: H and M
+category: T-Shirt
+price: 699
+floor_price: 599
+stock: 60
+color: Black
+description: Slim fit graphic print men black t-shirt
+
+---
+
+name: Women Oversized T-Shirt
+sku: TSHIRT-WO-003
+brand: Zudio
+category: T-Shirt
+price: 399
+floor_price: 330
+stock: 90
+color: Lavender
+description: Trendy oversized drop shoulder women t-shirt
+
+---
+
+name: Kids Dino Printed T-Shirt
+sku: TSHIRT-KD-004
+brand: Mothercare
+category: T-Shirt
+price: 299
+floor_price: 249
+stock: 100
+color: Green
+description: Cute dinosaur printed half sleeve kids t-shirt
+
+---
+
+name: Men Polo T-Shirt
+sku: TSHIRT-MP-005
+brand: Allen Solly
+category: T-Shirt
+price: 899
+floor_price: 750
+stock: 50
+color: Navy Blue
+description: Classic polo collar men t-shirt with brand embroidery

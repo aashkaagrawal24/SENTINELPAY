@@ -1,0 +1,11 @@
+{
+  "zk_groth16": {
+    "prove_ms": 8744.3,
+    "verify_ms": 5331.42,
+    "proof_bytes": 1211
+  },
+  "vdf_wesolowski_2048": {
+    "evaluate_ms": 231.66,
+    "verify_ms": 48.84
+  }
+}
