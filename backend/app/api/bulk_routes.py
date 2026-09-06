@@ -328,7 +328,13 @@ def analyze_rfq(
     db: Session = Depends(get_db_session),
 ):
     rfq = _get_rfq(db, rfq_id)
-    _require_merchant_role(db, UUID(str(rfq["merchant_id"])), user.id)
+    is_buyer = str(rfq["buyer_user_id"]) == str(user.id)
+    is_merchant = db.execute(
+        text("SELECT 1 FROM merchant_users WHERE merchant_id=:m AND user_id=:u"),
+        {"m": rfq["merchant_id"], "u": user.id},
+    ).scalar()
+    if not is_buyer and not is_merchant:
+        raise HTTPException(403, "Merchant access required")
 
     product = db.execute(
         text("SELECT * FROM merchant_products WHERE id=:pid"),
