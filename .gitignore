@@ -6,5 +6,6 @@ __pycache__/
 node_modules/
 .next/
 .eslintcache
+*.tsbuildinfo
 dist/
 *.pyc
